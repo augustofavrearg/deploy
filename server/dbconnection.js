@@ -6,7 +6,7 @@ Exporta la instancia de Sequelize para que pueda ser utilizada en otros archivos
 */
 // dbconnection.js
 import { Sequelize } from 'sequelize';
-import { DB_DATABASE, DB_PASSWORD, DB_USER, DB_HOST, DB_DIALECT } from './config.js';
+import { DB_DATABASE, DB_PASSWORD, DB_USER, DB_HOST } from './config.js';
 
 const sequelize = new Sequelize(DB_DATABASE, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
