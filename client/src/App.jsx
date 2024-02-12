@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     // Realizar la solicitud GET a la API de usuarios
-    axios.get(`${URL}/apiUser/users`)
+    axios.get(`${URL}apiUser/users`)
       .then(response => {
         // Actualizar el estado con los datos obtenidos
         setUsers(response.data);
@@ -33,8 +33,8 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Esta es la ruta register: " + URL + '/apiUser/register')
-    axios.post(`${URL}/apiUser/register`, newUser)
+    console.log("Esta es la ruta register: " + URL + 'apiUser/register')
+    axios.post(`${URL}apiUser/register`, newUser)
       .then(response => {
         // Actualizar la lista de usuarios con el nuevo usuario registrado
         setUsers(prevUsers => [...prevUsers, response.data]);
