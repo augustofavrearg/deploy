@@ -29,6 +29,30 @@ function App() {
           <li key={user.idUser}>{user.UserName} - {user.Email}</li>
         ))}
       </ul>
+      <h2>Registrar Nuevo Usuario:</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Nombre de Usuario:
+          <input
+            type="text"
+            name="userName"
+            value={newUser.userName}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Correo Electrónico:
+          <input
+            type="email"
+            name="email"
+            value={newUser.email}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <button type="submit">Registrar</button>
+      </form>
     </>
   );
 }
